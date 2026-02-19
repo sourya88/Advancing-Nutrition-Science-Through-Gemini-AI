@@ -6,13 +6,13 @@ from langchain_google_genai import GoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 import os
 
-# 🔑 PUT YOUR REAL API KEY HERE
+
 API_KEY = "Google_StudioAI_Key"
 
 genai.configure(api_key=API_KEY)
 
 llm = GoogleGenerativeAI(
-    model="gemini-2.5-flash",   # ✅ Updated model
+    model="gemini-2.5-flash",  
     google_api_key=API_KEY,
     temperature=0.7
 )
@@ -43,3 +43,4 @@ if input_data:
         response = get_nutritional_info_response(input_data)
         st.subheader("Nutritional Information")
         st.write(response)
+
